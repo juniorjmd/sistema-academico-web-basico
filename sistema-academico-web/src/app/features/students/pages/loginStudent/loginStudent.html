@@ -1,0 +1,45 @@
+<app-layout-auth>
+ 
+
+  <h2 class="text-xl font-bold mb-6 text-center">
+    Ingreso de Estudiante
+  </h2>
+
+  <form
+    [formGroup]="form"
+    (ngSubmit)="submit()"
+    class="space-y-4"
+  >
+
+    <!-- Email -->
+    <div>
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="Correo electrónico"
+        class="w-full border rounded px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300"
+      />
+
+      <p
+        *ngIf="form.controls.email.touched && form.controls.email.invalid"
+        class="text-red-500 text-sm mt-1"
+      >
+        Correo electrónico inválido
+      </p>
+    </div>
+
+    <!-- Botón -->
+    <button
+      type="submit"
+      [disabled]="form.invalid"
+      class="w-full bg-blue-600 text-white py-2 rounded
+             hover:bg-blue-700
+             disabled:opacity-50
+             disabled:cursor-not-allowed"
+    >
+      Ingresar
+    </button>
+
+  </form>
+ </app-layout-auth>
+ 

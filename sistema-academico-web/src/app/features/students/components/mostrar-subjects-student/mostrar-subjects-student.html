@@ -1,0 +1,32 @@
+<section class="p-4">
+
+  <h2 class="text-lg font-semibold mb-3">
+    Materias asignadas
+  </h2>
+
+  @if (loading()) {
+    <p class="text-gray-500">Cargando materias...</p>
+
+  } @else if (hasSubjects()) {
+
+    <ul class="space-y-3">
+      @for (subject of subjects(); track subject.id) {
+        <li class="bg-gray-100 p-4 rounded shadow-sm">
+          <p class="font-semibold">{{ subject.name }}</p>
+          <p class="text-sm text-gray-600">
+            Créditos: {{ subject.credits }}
+          </p>
+          <p class="text-sm text-gray-600">
+            Profesor: {{ subject.professorName }}
+          </p> 
+        </li>
+      }
+    </ul>
+
+  } @else {
+    <p class="text-gray-500">
+      El estudiante no tiene materias asignadas.
+    </p>
+  }
+
+</section>

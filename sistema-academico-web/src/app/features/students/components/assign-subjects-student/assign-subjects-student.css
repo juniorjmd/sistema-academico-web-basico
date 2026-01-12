@@ -1,0 +1,56 @@
+:host {
+  display: block;
+}
+
+ 
+.dialog-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+ 
+.dialog-content {
+  min-width: 420px;
+  max-height: 60vh;
+  padding-top: 8px;
+}
+
+/* Loading */
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #666;
+  padding: 16px 0;
+}
+
+ 
+.subject-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.subject-name {
+  font-weight: 500;
+}
+
+.subject-professor {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Errores */
+mat-error {
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+/* Acciones */
+.dialog-actions {
+  padding-top: 12px;
+}
+
+/* Scroll suave */
+mat-dialog-content {
+  scrollbar-width: thin;
+}

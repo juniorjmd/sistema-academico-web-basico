@@ -1,0 +1,58 @@
+<!-- Loading -->
+@if (loading()) {
+  <div class="flex justify-center py-6">
+    <div class="animate-spin rounded-full h-8 w-8 border-2 border-blue-500 border-t-transparent"></div>
+  </div>
+}
+
+<!-- Error -->
+@if (error()) {
+  <div class="bg-red-50 border border-red-200 text-red-700 p-4 rounded-lg">
+    {{ error() }}
+  </div>
+}
+
+<!-- Empty state -->
+@if (!loading() && !partners().length) {
+  <div class="text-center text-gray-500 py-6">
+    No compartes materias con otros estudiantes.
+  </div>
+}
+
+<!-- Partners -->
+<div class="space-y-4">
+    <div>Compañeros asignados</div>
+  @for (partner of partners(); track partner.id) {
+
+    <div class="bg-white border rounded-lg shadow-sm p-4">
+
+      <!-- Partner header -->
+      <div class="flex items-center gap-3 mb-3">
+        <div
+          class="w-10 h-10 rounded-full bg-blue-100 text-blue-700
+                 flex items-center justify-center font-semibold text-lg"
+        >
+          {{ partner.name.charAt(0).toUpperCase() }}
+        </div>
+
+        <h3 class="text-lg font-semibold text-gray-900">
+          {{ partner.name }}
+        </h3>
+      </div>
+
+      <!-- Shared subjects -->
+      <ul class="space-y-2 pl-2">
+        @for (subject of partner.sharedSubjects; track subject.id) {
+          <li class="flex items-center gap-2 text-gray-700">
+            <span class="text-blue-600">📘</span>
+            <span class="text-sm font-medium">
+              {{ subject.name }}
+            </span>
+          </li>
+        }
+      </ul>
+
+    </div>
+
+  }
+</div>
