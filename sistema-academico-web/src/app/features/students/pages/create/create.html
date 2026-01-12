@@ -1,0 +1,48 @@
+<app-layout-auth [noShowSelectLogin]="true">
+
+  <h2 class="text-xl font-bold mb-6 text-center">
+    Crear Estudiante
+  </h2>
+
+  <form
+    [formGroup]="form"
+    (ngSubmit)="submit()"
+    class="space-y-4"
+  >
+
+    <!-- Nombre -->
+    <input
+      type="text"
+      formControlName="name"
+      placeholder="Nombre completo"
+      class="w-full border rounded px-3 py-2"
+    />
+
+    <p
+      *ngIf="form.controls.name.touched && form.controls.name.invalid"
+      class="text-red-500 text-sm"
+    >
+      El nombre es obligatorio
+    </p>
+ 
+    <input
+      type="email"
+      formControlName="email"
+      placeholder="Correo electrónico"
+      class="w-full border rounded px-3 py-2"
+    />
+
+    <p
+      *ngIf="form.controls.email.touched && form.controls.email.invalid"
+      class="text-red-500 text-sm"
+    >
+      Correo inválido
+    </p>
+ 
+    <button  type="submit" [disabled]="form.invalid"class="w-full bg-blue-600 text-white py-2 rounded  disabled:opacity-50"    >
+      Crear cuenta
+    </button>
+
+  </form>
+
+</app-layout-auth>

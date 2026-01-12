@@ -1,0 +1,26 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="bg-white rounded shadow-md w-full max-w-md overflow-hidden">
+
+    <!-- Header del layout -->
+    <div class="px-6 py-4 border-b flex items-center justify-between">
+      <div class="font-semibold">Sistema Académico</div>
+
+      @if(!noShowSelectLogin()) {
+      <div class="text-sm space-x-3">
+        <a [routerLink]="'/'"
+        [routerLinkActive]="'text-blue-700 font-semibold underline'" 
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="hover:underline" >Estudiante</a>
+        <a [routerLink]="'/admin'" [routerLinkActive]="'text-blue-700 font-semibold underline'" 
+        [routerLinkActiveOptions]="{ exact: true }" class="hover:underline">Admin</a>
+      </div>}
+    </div>
+
+
+    <!-- Contenido -->
+    <div class="p-6">
+      <ng-content />
+    </div>
+
+  </div>
+</div>

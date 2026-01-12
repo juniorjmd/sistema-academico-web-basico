@@ -1,0 +1,71 @@
+<h2 mat-dialog-title class="dialog-title">
+  Seleccionar materias
+</h2>
+
+<mat-dialog-content class="dialog-content">
+  @if (loadingUser()) {
+  <mat-progress-spinner diameter="32"></mat-progress-spinner>
+}
+
+@if (errorStudent()) {
+  <p class="mat-error">
+    {{ errorStudent() }}
+  </p>
+}@if (savedUser()) {
+  <p class="success">
+      Materias agregadas con exito!!!
+  </p>
+}
+  @if (maxReached()) {
+    <mat-error>
+      No puedes seleccionar más de 3 materias.
+    </mat-error>
+  }
+
+  @if (duplicatedProfessor()) {
+    <mat-error>
+      No puedes seleccionar materias del mismo profesor.
+    </mat-error>
+  }
+  @if (loadSubjects()) {
+    <div class="loading">
+      <mat-spinner diameter="32"></mat-spinner>
+      <span>Cargando materias...</span>
+    </div>
+  } @else {
+
+    <mat-selection-list>
+      @for (subject of allSubjects(); track subject.id) {
+        <mat-list-option   [selected]="isChecked(subject.id)"
+          (click)="toggle(subject.id)"
+        >
+          <div class="subject-row">
+            <span class="subject-name">{{ subject.name }}</span>
+            <span class="subject-professor">
+              {{ subject.professorName  || 'No asignado' }}
+            </span>
+          </div>
+        </mat-list-option>
+      }
+    </mat-selection-list>
+
+  }
+
+
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end" class="dialog-actions">
+  <button mat-button (click)="closeModal()">
+    Cancelar
+  </button>
+
+  <button
+    mat-flat-button
+    color="primary"
+    [disabled]="!canSave()"
+    (click)="save()"
+  >
+    Guardar
+  </button>
+</mat-dialog-actions>
