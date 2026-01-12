@@ -1,0 +1,11 @@
+C:\desarrollo\back\.net\SistemaAcademico.Api\SistemaAcademico.Domain\bin\Debug\net10.0\SistemaAcademico.Domain.deps.json
+C:\desarrollo\back\.net\SistemaAcademico.Api\SistemaAcademico.Domain\bin\Debug\net10.0\SistemaAcademico.Domain.dll
+C:\desarrollo\back\.net\SistemaAcademico.Api\SistemaAcademico.Domain\bin\Debug\net10.0\SistemaAcademico.Domain.pdb
+C:\desarrollo\back\.net\SistemaAcademico.Api\SistemaAcademico.Domain\obj\Debug\net10.0\SistemaAcademico.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\desarrollo\back\.net\SistemaAcademico.Api\SistemaAcademico.Domain\obj\Debug\net10.0\SistemaAcademico.Domain.AssemblyInfoInputs.cache
+C:\desarrollo\back\.net\SistemaAcademico.Api\SistemaAcademico.Domain\obj\Debug\net10.0\SistemaAcademico.Domain.AssemblyInfo.cs
+C:\desarrollo\back\.net\SistemaAcademico.Api\SistemaAcademico.Domain\obj\Debug\net10.0\SistemaAcademico.Domain.csproj.CoreCompileInputs.cache
+C:\desarrollo\back\.net\SistemaAcademico.Api\SistemaAcademico.Domain\obj\Debug\net10.0\SistemaAcademico.Domain.dll
+C:\desarrollo\back\.net\SistemaAcademico.Api\SistemaAcademico.Domain\obj\Debug\net10.0\refint\SistemaAcademico.Domain.dll
+C:\desarrollo\back\.net\SistemaAcademico.Api\SistemaAcademico.Domain\obj\Debug\net10.0\SistemaAcademico.Domain.pdb
+C:\desarrollo\back\.net\SistemaAcademico.Api\SistemaAcademico.Domain\obj\Debug\net10.0\ref\SistemaAcademico.Domain.dll

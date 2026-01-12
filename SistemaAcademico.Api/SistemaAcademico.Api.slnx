@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="SistemaAcademico.Api/SistemaAcademico.Api.csproj" />
+  <Project Path="SistemaAcademico.Application/SistemaAcademico.Application.csproj" />
+  <Project Path="SistemaAcademico.Domain/SistemaAcademico.Domain.csproj" />
+  <Project Path="SistemaAcademico.Infrastructure/SistemaAcademico.Infrastructure.csproj" />
+</Solution>
