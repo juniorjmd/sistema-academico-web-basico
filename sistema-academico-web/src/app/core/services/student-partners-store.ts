@@ -36,8 +36,9 @@ export class StudentPartnersStore {
       },
       error: (err) => {
         this.#_partners.set([]);
+        console.log({err})
         this.#_error.set(
-          err?.message ?? 'Error al cargar los compañeros'
+          err?.error?.error ?? 'Error al cargar los compañeros'
         );
         this.#_loadParners.set(false);
       } 
